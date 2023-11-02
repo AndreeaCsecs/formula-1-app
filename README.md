@@ -1,56 +1,67 @@
-# Formula 1 Web Application
+   # Formula 1 Web Application
 
-This web application provides information about Formula 1 race results, winners, and a contact form.
+   This web application provides information about Formula 1 race results, winners, and a contact form.
 
-## Table of Contents
+   ## Table of Contents
 
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
+   - [Getting Started](#getting-started)
+   - [Usage](#usage)
+   - [Dependencies](#dependencies)
+   - [Contributing](#contributing)
 
-## Getting Started
+   ## Getting Started
 
-To get started with this application, follow these steps:
+   To get started with this application, follow these steps:
 
-1. Clone this repository to your local machine:
+   1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/yourusername/formula-1-app.git
-Navigate to the project directory:
+      ```bash
+      git clone https://github.com/yourusername/formula-1-app.git
+      ```
 
-bash
-Copy code
-cd formula-1-app
-Install the required dependencies:
+      2. Navigate to the project directory:
 
-bash
-Copy code
-npm install
-Build and serve the application:
+      ```bash
+      cd formula-1-app
+      ```
 
-bash
-Copy code
-ng serve --proxy-config proxy.conf.json
-Access the application in your web browser at http://localhost:4200.
+      3. Install the required dependencies:
 
-Usage
-Results Page: View round standings for different years, including date, circuit information, and driver results.
-Winners Page: Check the final standings of drivers for various years.
-Contact Page: Use the contact form to send a message to a driver.
-Dependencies
-This application is built using Angular and may rely on various npm packages and dependencies. A few key dependencies include:
+      ```bash
+      npm install
+      ```
 
-Angular CLI: Link
-Angular Material: Link
-Make sure to install the required dependencies using npm install as mentioned in the "Getting Started" section.
+      4. Build and serve the application:
 
-Contributing
-If you'd like to contribute to this project, please follow these steps:
+      ```bash
+      ng serve --proxy-config proxy.conf.json
+      ```
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them.
-Push your branch to your fork.
-Submit a pull request.
-Thank you for contributing!
+      5. Access the application in your web browser at [http://localhost:4200](http://localhost:4200).
+
+   ## Usage
+
+   - Results Page: View round standings for different years, including date, circuit information, and driver results.
+   - Winners Page: Check the final standings of drivers for various years.
+   - Contact Page: Use the contact form to send a message to a driver.
+
+   ## Dependencies
+
+   This application is built using Angular and may rely on various npm packages and dependencies. A few key dependencies include:
+
+   - Angular CLI: [Link](https://cli.angular.io/)
+   - Angular Material: [Link](https://material.angular.io/)
+
+   Make sure to install the required dependencies using `npm install` as mentioned in the "Getting Started" section.
+
+   ## Contributing
+
+   If you'd like to contribute to this project, please follow these steps:
+
+   1. Fork the repository.
+   2. Create a new branch for your feature or bug fix.
+   3. Make your changes and commit them.
+   4. Push your branch to your fork.
+   5. Submit a pull request.
+
+   Thank you for contributing!
