@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Formula1App';
+  title = 'Formula 1 App';
+  currentPage: string = ''; // Define the currentPage property
+
+  constructor(private router: Router) {}
+
+  goToPage(pageName: string): void {
+    this.router.navigate([`${pageName}`]);
+  }
 }

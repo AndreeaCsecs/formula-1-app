@@ -1,0 +1,41 @@
+<div class="contact-page">
+    <h2>Contact Form</h2>
+  
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" formControlName="subject" [attr.required]="!submitted || contactForm.get('subject')?.touched" />
+        <div *ngIf="contactForm.get('subject')?.hasError('required') && (contactForm.get('subject')?.touched || submitted)" class="error">
+          Subject is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" formControlName="message" [attr.required]="!submitted || contactForm.get('message')?.touched"></textarea>
+        <div *ngIf="contactForm.get('message')?.hasError('required') && (contactForm.get('message')?.touched || submitted)" class="error">
+          Message is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="driverName">Select a Driver:</label>
+        <select id="driverName" formControlName="driverName" [attr.required]="!submitted || contactForm.get('driverName')?.touched">
+          <option [ngValue]="null" disabled>Select a driver</option>
+          <option *ngFor="let driver of driverNames" [ngValue]="driver">{{ driver }}</option>
+        </select>
+        <div *ngIf="contactForm.get('driverName')?.hasError('required') && (contactForm.get('driverName')?.touched || submitted)" class="error">
+          Driver name is required.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="!contactForm.valid" id="submit-button">Submit</button>
+    </form>
+   
+    <div *ngIf="submitted" class="submission-message">
+        Form submitted successfully!
+      </div>
+</div>
+
+
+

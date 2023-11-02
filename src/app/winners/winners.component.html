@@ -1,0 +1,33 @@
+<div class="winners-page">
+
+    <h2>Formula 1 Winners</h2>
+  
+    <!-- Year dropdown -->
+    <div class="year-dropdown">
+      <label for="year-select">Select a Year:</label>
+      <select id="year-select" [(ngModel)]="selectedYear" (change)="loadWinners()">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    </div>
+  
+    <!-- Driver Standings -->
+    <table class="driver-standings-table">
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Points</th>
+      <th>Driver Name</th>
+      <th>Constructor Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let standing of driverStandings" [ngClass]="{'first-position': standing.position === '1', 'second-position': standing.position === '2', 'third-position': standing.position === '3'}">
+      <td>{{ standing.position }}</td>
+      <td>{{ standing.points }}</td>
+      <td>{{ standing.Driver.givenName }} {{ standing.Driver.familyName }}</td>
+      <td>{{ standing.Constructors[0].name }}</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+  

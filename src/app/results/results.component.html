@@ -1,0 +1,45 @@
+<div class="results-page">
+    <h2>Formula 1 Results</h2>
+  
+    <!-- Year dropdown -->
+    <div class="year-dropdown">
+      <label for="year-select">Select a Year:</label>
+      <select id="year-select" [(ngModel)]="selectedYear" (change)="loadResults()">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    </div>
+  
+    <!-- Round Standings -->
+    <div class="round-standings">
+      <h3>Round Standings</h3>
+      <div *ngIf="results?.MRData && results.MRData.RaceTable">
+        <!-- Check if 'MRData' and 'RaceTable' are available -->
+        <div *ngFor="let round of results.MRData.RaceTable.Races" class="round">
+          <!-- Check if 'Races' is available and iterate through rounds -->
+          <h4>Round Date: {{ round.date }}</h4>
+          <p>Circuit: {{ round.Circuit?.circuitName }}</p> <!-- Use safe navigation operator here -->
+  
+          <!-- Driver Results Table for this Round -->
+          <table class="driver-results-table">
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Points</th>
+                <th>Driver Name</th>
+                <th>Constructor Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let result of round.Results" [ngClass]="{'first-position': result.position === '1', 'second-position': result.position === '2', 'third-position': result.position === '3'}">
+                <td>{{ result.position }}</td>
+                <td>{{ result.points }}</td>
+                <td>{{ result.Driver?.givenName }} {{ result.Driver?.familyName }}</td>
+                <td>{{ result.Constructor?.name }}</td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
