@@ -1,19 +1,22 @@
-Formula 1 Web Application
+# Formula 1 Web Application
+
 This web application provides information about Formula 1 race results, winners, and a contact form.
 
-Table of Contents
-Getting Started
-Usage
-Dependencies
-Contributing
-Getting Started
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+
+## Getting Started
+
 To get started with this application, follow these steps:
 
-Clone this repository to your local machine:
+1. Clone this repository to your local machine:
 
-bash
-Copy code
-git clone https://github.com/yourusername/formula-1-app.git
+   ```bash
+   git clone https://github.com/yourusername/formula-1-app.git
 Navigate to the project directory:
 
 bash
