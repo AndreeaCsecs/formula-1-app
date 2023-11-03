@@ -21,7 +21,7 @@ export class WinnersComponent {
   }
 
   loadAvailableYears() {
-    this.http.get('http://ergast.com/api/f1/seasons.json?limit=100').subscribe((data: any) => {
+    this.http.get('https://ergast.com/api/f1/seasons.json?limit=100').subscribe((data: any) => {
       if (data.MRData && data.MRData.SeasonTable && data.MRData.SeasonTable.Seasons) {
         this.years = data.MRData.SeasonTable.Seasons.map((season: any) => Number(season.season));
       }
@@ -29,7 +29,7 @@ export class WinnersComponent {
   }
 
   loadWinners() {
-    const apiUrl = `http://ergast.com/api/f1/${this.selectedYear}/driverStandings.json?limit=400&offset=0`;
+    const apiUrl = `https://ergast.com/api/f1/${this.selectedYear}/driverStandings.json?limit=400&offset=0`;
 
     this.http.get(apiUrl).subscribe((data: any) => {
       if (data.MRData && data.MRData.StandingsTable && data.MRData.StandingsTable.StandingsLists) {

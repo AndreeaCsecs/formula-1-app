@@ -18,7 +18,7 @@ export class ResultsComponent implements OnInit {
   }
 
   loadResults() {
-    const url = `http://ergast.com/api/f1/${this.selectedYear}/results.json?limit=400&offset=0`;
+    const url = `https://ergast.com/api/f1/${this.selectedYear}/results.json?limit=400&offset=0`;
     this.http.get(url).subscribe((data: any) => {
       this.results = data;
     });

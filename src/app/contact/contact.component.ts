@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get(`http://ergast.com/api/f1/${this.currentYear}/drivers.json`).subscribe({
+    this.http.get(`https://ergast.com/api/f1/${this.currentYear}/drivers.json`).subscribe({
       next: (data: any) => {
         if (data?.MRData?.DriverTable?.Drivers) {
           this.driverNames = data.MRData.DriverTable.Drivers.map((driver: any) => {
