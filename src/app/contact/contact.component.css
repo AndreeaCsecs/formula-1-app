@@ -6,7 +6,6 @@
   height: 67vh;
 }
 
-/* Style the form container */
 form {
   background-color: #f0f0f0;
   padding: 20px;
@@ -16,7 +15,6 @@ form {
   text-align: center;
 }
 
-/* Style form elements */
 .form-group {
   margin: 10px 0;
 }
@@ -42,7 +40,6 @@ textarea {
 
 }
 
-/* Style the submit button */
 button[type="submit"] {
   background-color: #007BFF;
   color: #fff;
@@ -52,12 +49,10 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-/* Add a hover effect for the submit button */
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* Style error messages with emojis */
 .error {
   color: #f00;
   font-size: 14px;
@@ -67,11 +62,10 @@ button[type="submit"]:hover {
 }
 
 .error::before {
-  content: "❌"; /* Add a red X emoji before error messages */
+  content: "❌"; 
   margin-right: 5px;
 }
 
-/* Style the select dropdown */
 select {
   width: 100%;
   padding: 10px;
@@ -80,24 +74,24 @@ select {
 }
 
 .submission-message {
-  background-color: #4CAF50; /* Green background color */
-  color: white; /* White text color */
-  padding: 10px; /* Add some padding for better visibility */
-  margin-top: 10px; /* Create space between the form and the message */
-  border-radius: 5px; /* Rounded corners for better appearance */
-  text-align: center; /* Center the text */
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 10px; 
+  margin-top: 10px; 
+  border-radius: 5px; 
+  text-align: center; 
   display: flex;
   align-items: center;
 }
 
 .submission-message::before {
-  content: "✅"; /* Add a green checkmark emoji before success message */
+  content: "✅"; 
   font-size: 24px;
   margin-right: 10px;
 }
 
 @media (max-width: 768px) {
   form {
-    width: 80%; /* Adjust the form width for smaller screens */
+    width: 80%; 
   }
 }

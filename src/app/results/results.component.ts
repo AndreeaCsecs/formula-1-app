@@ -8,13 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ResultsComponent implements OnInit {
   years: number[] = Array.from({ length: 2022 - 1950 + 1 }, (_, index) => 1950 + index);
-  selectedYear: number = 2022; // Set a default year
+  selectedYear: number = 2022; 
   results: any;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    // You can keep this code to fetch data for the default year if needed
     this.loadResults();
   }
 

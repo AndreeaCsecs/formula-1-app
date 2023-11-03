@@ -1,35 +1,31 @@
-/* Style the overall winners page */
 .winners-page {
     text-align: center;
     margin: 20px;
   }
   
-  /* Style the year selection dropdown */
   .year-dropdown{
     margin-bottom: 10px;
   }
   
   .year-dropdown select {
-  width: 100px; /* Adjust the width to your preference */
+  width: 100px; 
   padding: 5px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
-  display: inline-block; /* Display the select as inline-block */
+  display: inline-block; 
 }
 
 .year-dropdown label {
   font-weight: bold;
   color: #666;
-  display: inline-block; /* Display the label as inline-block */
-  margin-right: 10px; /* Add margin to separate label and select */
+  display: inline-block; 
+  margin-right: 10px;
 }
 
-  
- /* Style the driver standings table */
-.driver-standings-table {
+  .driver-standings-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
@@ -46,29 +42,25 @@
   color: white;
 }
 
-/* Custom styles for the first three positions */
 .first-position {
-  background-color: #f6e586; /* Highlight winner in gold */
+  background-color: #f6e586; 
   color: #333;
 }
 
 .second-position {
-  background-color: #c0c0c0; /* Silver for the second position */
+  background-color: #c0c0c0; 
   color: #333;
 }
 
 .third-position {
-  background-color: #e0af7f; /* Bronze for the third position */
+  background-color: #e0af7f; 
   color: #333;
 }
 
-  
-  /* Style the page title */
-  h2 {
+    h2 {
     color: #333;
   }
   
-  /* Style the year selection dropdown label */
   label {
     font-weight: bold;
     color: #666;

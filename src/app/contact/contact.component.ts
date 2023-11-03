@@ -44,18 +44,14 @@ export class ContactComponent implements OnInit {
       const formData = this.contactForm.value;
       console.log('Form Data:', formData);
   
-      // Define the fake API URL (replace with your actual URL)
       const fakeApiUrl = 'https://jsonplaceholder.typicode.com/posts';
   
-      // Use HttpClient to make a POST request to the fake API
       this.http.post(fakeApiUrl, formData).subscribe({
         next: (response) => {
           console.log('Form submitted successfully:', response);
-          // You can perform any further actions after a successful submission here
         },
         error: (error) => {
           console.error('Form submission error:', error);
-          // Handle errors or show an error message to the user
         }
       });
     } else {

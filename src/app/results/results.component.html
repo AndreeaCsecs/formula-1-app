@@ -1,7 +1,6 @@
 <div class="results-page">
     <h2>Formula 1 Results</h2>
   
-    <!-- Year dropdown -->
     <div class="year-dropdown">
       <label for="year-select">Select a Year:</label>
       <select id="year-select" [(ngModel)]="selectedYear" (change)="loadResults()">
@@ -9,17 +8,13 @@
       </select>
     </div>
   
-    <!-- Round Standings -->
     <div class="round-standings">
       <h3>Round Standings</h3>
       <div *ngIf="results?.MRData && results.MRData.RaceTable">
-        <!-- Check if 'MRData' and 'RaceTable' are available -->
         <div *ngFor="let round of results.MRData.RaceTable.Races" class="round">
-          <!-- Check if 'Races' is available and iterate through rounds -->
           <h4>Round Date: {{ round.date }}</h4>
-          <p>Circuit: {{ round.Circuit?.circuitName }}</p> <!-- Use safe navigation operator here -->
+          <p>Circuit: {{ round.Circuit?.circuitName }}</p> 
   
-          <!-- Driver Results Table for this Round -->
           <table class="driver-results-table">
             <thead>
               <tr>
